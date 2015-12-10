@@ -1,6 +1,6 @@
 var express = require('express');
 var app = new express();
-
+app.use(express.static(__dirname + '/../bower_components'));
 app.get('/', function(req,res) {
 	res.render('./../app/index.ejs', {});
 })
